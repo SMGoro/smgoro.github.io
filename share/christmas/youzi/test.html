@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>获取URL参数示例</title>
+</head>
+<body>
+
+<h1>欢迎来到我的网页</h1>
+<p>您的名字是：<span id="name"></span></p>
+
+<script>
+  // 使用JavaScript获取URL参数
+  function getParameterByName(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const url = window.location.href;
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // 获取名为"name"的参数
+  const name = getParameterByName('name');
+  if (name) {
+    document.getElementById('name').innerText = name;
+  }
+</script>
+
+</body>
+</html>

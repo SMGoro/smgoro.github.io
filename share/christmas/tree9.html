@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Christmas Tree for NanNan</title>
+    <title>Christmas Tree for <span id="name"></span></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -54,8 +54,10 @@
             <div class="snow snow-8 snow-y-2"></div>
             <div class="snow snow-9 snow-y-3"></div>
             <div class="snow snow-10 snow-y-3"></div>
-            <div style="position: absolute; top: 600px;left: 37%;font-family:'Impact';font-size: 50px;color: white;"><span>Merry Christmas&nbspTo&nbspNanNan</span></div>
-            <!-- from 爱你的 DfC -->
+            <center>
+                <div style="position: absolute; top: 600px;left: 37%;font-family:'Impact';font-size: 50px;color: white;"><span>Merry Christmas&nbspTo&nbsp</span><span id="name"></span></div>
+            </center>
+            <!-- from SummerGoro -->
         </div>
     </div>
 
@@ -587,5 +589,24 @@
         }
     }
 </style>
+
+<script>
+    // 使用JavaScript获取URL参数
+    function getParameterByName(name) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      const url = window.location.href;
+      const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+  
+    // 获取名为"name"的参数
+    const name = getParameterByName('name');
+    if (name) {
+      document.getElementById('name').innerText = name;
+    }
+  </script>
 
 </html>

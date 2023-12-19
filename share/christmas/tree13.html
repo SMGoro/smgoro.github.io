@@ -70,8 +70,24 @@ M=Math;Q=M.random;J=[];U=16;T=M.sin;E=M.sqrt;for(O=k=0;x=z=j=i=k<200;)with(M[k]=
 </script>
 </canvas>
 <script>
-    var name=prompt('请输入你的姓名')
+  //  var name=prompt('请输入你的姓名')
+  // 使用JavaScript获取URL参数 使用 ?name= 参数获取
+  function getParameterByName(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const url = window.location.href;
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // 获取名为"name"的参数
+  const name = getParameterByName('name');
+  if (name) {
+    // document.getElementById('name').innerText = name;
     document.getElementById("demo").innerHTML = name+"的圣诞树";
+  }
 </script>
 </body>
 </html>
