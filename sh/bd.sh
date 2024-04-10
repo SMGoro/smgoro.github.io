@@ -1,0 +1,1 @@
+bash <(curl -L https://blog.imc.re/sh/bd_install/i.sh)
