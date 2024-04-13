@@ -195,9 +195,22 @@ footer {
     flex-direction: column;
 }
 
-.column li {
+.column li a {
     padding: 5px 0;
     width: 100%; /* 列表项占据整个宽度 */
+    font-size: 20px;
+    text-decoration: none;
+    color: #4e4e4e;
+    line-height: 1.5;
+}
+
+.column li a:hover {
+    padding: 5px 0;
+    width: 100%; /* 列表项占据整个宽度 */
+    font-size: 20px;
+    text-decoration: none;
+    color: #6c3aff;
+    text-decoration: underline;
 }
 
 
