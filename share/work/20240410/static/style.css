@@ -18,6 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    position: relative;
 }
 
 #header nav ul {
@@ -213,4 +214,35 @@ footer {
     text-decoration: underline;
 }
 
+.menu_list {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    z-index: 50;
+    top: 70%;
+    right: 50%;
+    display: none;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 1);
+    border-radius: 12px;
+}
 
+.more {
+    padding-bottom: 10px;
+}
+
+.more:hover + .menu_list {
+    display: block;
+}
+
+.menu_list:hover {
+    display: block;
+}
+
+.menu_item {
+    width: 50px;
+    height: 50px;
+    background-color: #4e4e4e;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
