@@ -12,37 +12,19 @@ body {
 /* 头部样式 */
 #header {
     background-color: rgb(255,255,255);
-    color: white;
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    position: relative;
 }
 
-#header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#header .left {
+    margin-top: 20px;
     display: flex;
-    height: 20px;
-    margin-left: 30px;
-    margin-top: 10px;
 }
 
-#header nav ul li {
-    margin: 0 10px;
-    font-size: 15px;
-}
-
-#header nav ul li a {
-    color: rgb(80, 80, 80);
-    text-decoration: none;
-}
-
-#header .left a {
-    padding: 0;
+#header .left .mnav {
     margin: 0 10px;
     font-size: 15px;
     color: rgb(80, 80, 80);
@@ -214,20 +196,23 @@ footer {
     text-decoration: underline;
 }
 
-.menu_list {
-    width: 250px;
-    height: 300px;
-    position: absolute;
-    z-index: 50;
-    top: 70%;
-    right: 50%;
-    display: none;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 1);
-    border-radius: 12px;
-}
-
 .more {
     padding-bottom: 10px;
+    position: relative;
+}
+
+.menu_list {
+    width: 230px;
+    height: 330px;
+    position: absolute; 
+    top: 6%;
+    right: 55%;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
 }
 
 .more:hover + .menu_list {
@@ -239,10 +224,85 @@ footer {
 }
 
 .menu_item {
-    width: 50px;
-    height: 50px;
-    background-color: #4e4e4e;
+    width: 60px;
+    height: 80px;
+    font-size: 14px;
     float: left;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.menu_item img {
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 5px;
+    border-color: #4e4e4e;
+}
+
+
+.menu_item:hover {
+    background-color: rgb(226, 226, 242);
+    color: #092fef;
+}
+
+.more_check {
+    width: 212px;
+    height: 27px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    font-size: 15px;
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+.more_check:hover {
+    background-color: #f1f3fd;
+    border-radius: 8px;
+    color: #2a77eb;
+}
+
+.settings {
+    float: left;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.menu_list2 {
+    width: 84px;
+    height: 150px;
+    display: none;
+    padding: 8px 0;
+    text-align: left;
+    position: absolute;
+    top: 6%;
+    left: 86%;
+    float: right;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.menu_item2 {
+    text-align: center;
+    font: 13px/23px Arial,sans-serif;
+    margin-top: 5px;
+}
+
+.menu_item2:hover {
+    color: #2d4dea;
+}
+
+.settings:hover + .menu_list2 {
+    display: block;
+}
+
+.menu_list2:hover {
+    display: block;
 }
