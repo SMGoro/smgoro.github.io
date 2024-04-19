@@ -43,7 +43,6 @@ body {
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 10px;
-    max-width: 80%; /* Limit the width of the message box */
     margin-left: 0;
 }
 

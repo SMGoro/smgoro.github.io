@@ -32,6 +32,10 @@ body {
     margin-left: 20px;
 }
 
+#header .left .mnav:hover {
+    color: rgb(86, 111, 255);
+}
+
 #header .right button {
     background-color: transparent;
     border: none;
@@ -87,8 +91,8 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    width: 800px; /* 缩短搜索框的宽度 */
-    /* max-width: 500px; 最大宽度限制 */
+    width: 90%; /* 缩短搜索框的宽度 */
+    max-width: 800px;
     position: relative; /* 添加这个属性，以便我们可以将.camera-icon定位到input内部 */
 }
 
@@ -117,7 +121,7 @@ body {
 .camera-icon {
     position: absolute; /* 将.camera-icon定位到input内部 */
     top: 28%; 
-    right: 18%; 
+    right: 140px; 
     width: 25px; 
     height: 25px; 
     background-size: cover;
@@ -205,14 +209,15 @@ footer {
     width: 230px;
     height: 330px;
     position: absolute; 
-    top: 6%;
-    right: 55%;
+    top: 30px;
+    left: -150px;
     display: none;
     z-index: 100;
     box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
     background-color: white;
     border-radius: 12px;
     text-align: center;
+    
 }
 
 .more:hover + .menu_list {
@@ -281,8 +286,8 @@ footer {
     padding: 8px 0;
     text-align: left;
     position: absolute;
-    top: 6%;
-    left: 86%;
+    top: 50px;
+    right: 95px;
     float: right;
     box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
     border-radius: 10px;
