@@ -13,6 +13,12 @@ function getCurrentTime() {
 
 function send() {
     const message = textarea.value;
+
+    if (message.trim() === '') {
+        alert('不能发送空白消息');
+        return;
+    }
+    
     // 在 chat-area 里添加 message div 展示发送内容
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
@@ -38,6 +44,11 @@ function send() {
     chatArea.scrollTop = chatArea.scrollHeight;
 }
 
+// 按钮发送
+sendBtn.addEventListener('click', function() {
+    send();
+});
+
 // 按键发送
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Alt') {
@@ -50,18 +61,7 @@ textarea.addEventListener('keydown', function(event) {
         // 发送消息的逻辑
         const message = textarea.value;
         if (message.trim() !== '') {
-            send.apply();
+            send();
         }
     }
-});
-
-// 按钮发送
-sendBtn.addEventListener('click', function() {
-    const message = textarea.value; // 获取 textarea 里的内容
-
-    if (message.trim() === '') {
-        alert('不能发送空白消息');
-        return;
-    }
-    send.apply();
 });
